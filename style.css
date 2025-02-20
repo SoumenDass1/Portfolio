@@ -113,29 +113,50 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: #fff 5px solid;
-    animation: shadows 3s linear infinite;
     right: 10%;
 }
 
-@keyframes shadows{
-    0%{
-        box-shadow: none;
+.image::after, .image::before{
+    --angle: ;
+    content: ' ';
+    position: absolute;
+    height: 110%;
+    width: 110%;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 4px;
+    background: conic-gradient(from var(--angle), rgb(255, 0, 242), #00ff00, rgb(255, 0, 242), #00ff00,rgb(255, 0, 242));
+    animation: spinx 2s infinite linear;
+}
+
+.image::before{
+    filter: blur(2rem);
+    opacity: 0.5;
+}
+
+@keyframes spinx{
+    form {
+        --angle: 0deg;
     }
-    50%{
-        box-shadow: 0 0 10px rgb(225, 255, 0), 0 0 20px rgb(140, 255, 0), 0 0 40px rgb(102, 255, 0), 0 0 80px rgb(0, 255, 68);
+    to{
+        --angle: 360deg;
     }
-    100%{
-        box-shadow: none;
-    }
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
 }
 
 .home-img img{
     height: 400px;
     width: 400px;
     border-radius: 50%;
-    box-shadow: 0 0 40px #00ffd5, 0 0 80px #00eeff, 0 0 120px #001aff;
-    animation: shadows 3s linear infinite;
+
 }
 
 .home-content{
@@ -162,7 +183,7 @@ header {
 }
 
 .home-content h3 span{
-    color: #00ff2f;
+    color: #00ff00;
 }
 
 .home-content h1{
@@ -302,181 +323,85 @@ header {
     top: 1700px;
 }
 
+.btn-box2:hover{
+    box-shadow: 0 0 20px #00ff2f, 0 0 40px #00ff2f, 0 0 80px #00ff2f;
+}
+
 /* Skills Section */
-
-.skill-x{
-    padding: 70px 42%;
-}
-
-.skill-x {
-    font-size: 60px;
-    font-weight: 700;
-    margin: 50px 0;
-    color: #00ff2f;
-    opacity: 0;
-    animation: slide-top 1.5s ease forwards;
-}
-
-.skill-x span{
-    color: #fff;
-    font-size: 60px;
-    font-weight: 700;
-}
-
-.skills-container {
+.skills {
     display: flex;
-    justify-content: space-around; /* Thoda aur space dene ke liye */
+    justify-content: center;
     align-items: center;
-    gap: 100px; /* Extra space add karne ke liye */
-    margin-top: 50px;
+    margin-top: 60px;
+    gap: 20px;
+    font-size: 60px;
+    color: #00ff00;
+}
+
+.skills span {
+    color: white;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    margin: 30px;
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    perspective: 1000px;
+    margin-left: 100px;
+}
+
+.card-front, .card-back {
     width: 100%;
-}
-
-.coding-skills {
-    margin-top: 50px;
-    height: 500px;
-    width: 500px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.skill {
-    position: relative;
-    text-align: center;
-}
-
-.coding-skills h3 {
-    transition: opacity 0.3s ease;
-}
-
-.coding-skills .bar {
-    height: 10px;
-    width: 200px;
-    background: #ffffff;
-    position: relative;
-    overflow: hidden;
-    margin: 10px 60px;
-    border-radius: 5px;
-}
-
-.coding-skills .bar .progress {
     height: 100%;
-    background: #00ff2f;
-    width: 0;
-    transition: width 1s ease-in-out;
-}
-
-.progress.html { width: 70%; animation: fillBar70 2s ease-in-out forwards; }
-.progress.css { width: 70%; animation: fillBar70 2s ease-in-out forwards; }
-.progress.js { width: 30%; animation: fillBar30 2s ease-in-out forwards; }
-.progress.python { width: 45%; animation: fillBar45 2s ease-in-out forwards; }
-
-@keyframes fillBar70 {
-    from { width: 0; }
-    to { width: 70%; }
-}
-
-@keyframes fillBar30 {
-    from { width: 0; }
-    to { width: 30%; }
-}
-
-@keyframes fillBar45 {
-    from { width: 0; }
-    to { width: 45%; }
-}
-
-/* Percentage display */
-.coding-skills .bar .percentage {
     position: absolute;
-    color: #00ff2f;
-    font-size: 14px;
-    font-weight: 500;
-    right: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.skills-content {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    height: 500px;
-    width: 500px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    border: 3px solid #00ff00;
+    background: black;
+    color: white;
+    font-size: 20px;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
 }
 
-.extra-skills {
-    position: relative;
-    text-align: center;
+.card-front {
+    transform: rotateY(0deg);
 }
 
-.skills-content h3 {
-    transition: opacity 0.3s ease;
+.card-back {
+    transform: rotateY(180deg);
+    flex-direction: column;
 }
 
-.skills-content .bar {
+.card:hover .card-front {
+    transform: rotateY(-180deg);
+}
+
+.card:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+/* Progress Bar Styling */
+.progress-bar {
+    width: 80%;
     height: 10px;
-    width: 200px;
-    background: #ffffff;
-    position: relative;
-    overflow: hidden;
-    margin: 10px 60px;
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
 }
 
-/* Bar filling animation */
-.skills-content .bar .progress {
+.progress-fill {
     height: 100%;
-    background: #00ff2f;
-    width: 0;
-    transition: width 1s ease-in-out;
-}
-
-/* Different skill percentages */
-.progress.time-management { width: 80%; animation: fillBar80 2s ease-in-out forwards; }
-.progress.communication { width: 60%; animation: fillBar60 2s ease-in-out forwards; }
-.progress.teamwork { width: 75%; animation: fillBar75 2s ease-in-out forwards; }
-.progress.problem-solving { width: 85%; animation: fillBar85 2s ease-in-out forwards; }
-
-/* Keyframe animations */
-@keyframes fillBar80 {
-    from { width: 0; }
-    to { width: 80%; }
-}
-
-@keyframes fillBar60 {
-    from { width: 0; }
-    to { width: 60%; }
-}
-
-@keyframes fillBar75 {
-    from { width: 0; }
-    to { width: 75%; }
-}
-
-@keyframes fillBar85 {
-    from { width: 0; }
-    to { width: 85%; }
-}
-
-/* Percentage display */
-.skills-content .bar .percentage {
-    position: absolute;
-    color: #00ff2f;
-    font-size: 14px;
-    font-weight: 500;
-    right: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-/* Hover effect */
-.extra-skills:hover h3 {
-    opacity: 0;
-}
-
-.extra-skills:hover .percentage {
-    opacity: 1;
+    background: #00ff00;
+    width: 0%;
+    transition: width 1.5s ease-in-out;
 }
