@@ -2,7 +2,7 @@
 
 let typed1 = new Typed('.first-line', {
     strings: ["Welcome to My portfolio, I hope you will like it!"],
-    typeSpeed: 50,
+    typeSpeed: 90,
     loop: false
 });
 
