@@ -116,14 +116,44 @@ header {
     justify-content: center;
     align-items: center;
     right: 10%;
+    border : 5px solid #ffffff;
+    animation: glow1 3s infinite linear;
 }
 
+@keyframes glow1 {
+    0% {
+        box-shadow: 0 0px #00ff2f;
+    }
+
+    50% {
+        box-shadow: 0 0 40px #00ff2f;
+    }
+
+    100% {
+        box-shadow: 0 0 px #00ff2f;
+    }
+
+}
 
 .home-img img {
     height: 400px;
     width: 400px;
     border-radius: 50%;
+    animation: glow 3s infinite linear;
+}
 
+@keyframes glow {
+    0% {
+        box-shadow: 0 0px #00ff2f;
+    }
+
+    50% {
+        box-shadow: 0 0 40px #00ff2f;
+    }
+
+    100% {
+        box-shadow: 0 0 px #00ff2f;
+    }
 }
 
 .home-content {
