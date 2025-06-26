@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soumen Dass - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css folder/scrollbar.css">
+  <link rel="stylesheet" href="./css folder/style-mobile.css" media="only screen and (max-width: 767px)">
+  <link rel="stylesheet" href="./css folder/style-tablet.css"
+    media="only screen and (min-width: 768px) and (max-width: 991px)">
+  <link rel="stylesheet" href="./css folder/style-laptop.css"
+    media="only screen and (min-width: 992px) and (max-width: 1199px)">
+  <link rel="stylesheet" href="./css folder/style-desktop.css"
+    media="only screen and (min-width: 1200px) and (max-width: 1439px)">
+  <link rel="stylesheet" href="./css folder/style-large.css"
+    media="only screen and (min-width: 1440px) and (max-width: 1919px)">
+  <link rel="stylesheet" href="./css folder/https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <link rel="stylesheet" href="./css folder/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+
+<body>
+  <div class="diagonal-split">
+    <!-- White Left Side Content -->
+    <div class="left-side">
+      <div class="hero-content">
+        <h1>Hi, I am</h1>
+        <h1><span>Soumen Dass</span></h1>
+        <p>And right now <br>I am learning <span class="text"></span></p>
+      </div>
+    </div>
+    <!-- Black Right Side Content -->
+    <div class="right-side">
+      <header class="main-header">
+        <nav class="main-nav">
+          <ul class="header-content">
+            <li><a href="#about">About me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Project</a></li>
+            <li><a href="#contact" class="contact-btn">CONTACT ME</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="profile-image-container">
+        <img src="./images/image2.png" alt="Soumen Dass">
+      </div>
+    </div>
+  </div>
+  <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h1><span class="bordered-about">About </span>Me</h1>
+    <div class="about-me">
+      <div class="about-image">
+        <img src="./images/image.png" alt="About Image" />
+      </div>
+      <div class="about-text">
+        <span class="text2"></span>
+        <br />
+        <button class="read-more hidden">Read More</button>
+      </div>
+    </div>
+  </section>
+  <!-- ------------------------------------------------------------------------------------------------------------------------- -->
+  <!-- Skill section -->
+  <section class="skills" id="skills">
+    <h1>Skills</h1>
+    <div class="about_my_skills">
+      <h1 class="mySkills">Technical Skills</h1>
+      <div class="wrapper">
+        <div class="itemLeft item1">Python</div>
+        <div class="itemLeft item2">HTML</div>
+        <div class="itemLeft item3">CSS</div>
+        <div class="itemLeft item4">JavaScript</div>
+        <div class="itemLeft item5">React</div>
+      </div>
+      <h1 class="mySkills">Non Technical Skills</h1>
+      <div class="wrapper">
+        <div class="itemRight item1">Figma</div>
+        <div class="itemRight item2">Photopea</div>
+        <div class="itemRight item3">☣︎</div>
+        <div class="itemRight item4">☣︎</div>
+        <div class="itemRight item5">☣︎</div>
+      </div>
+    </div>
+  </section>
+  <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+  <!-- Projects -->
+  <section class="projects" id="projects">
+    <h1>Projects</h1>
+
+    <div class="project-box">
+      <!-- Project Card 1 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h2>BMI Calculator</h2>
+          </div>
+          <div class="flip-card-back">
+            <a href="https://github.com/SoumenDass1/BMI_Calculator/blob/main/index.html" target="_blank">GitHub</a>
+            <a href="https://calculate-mybmi.netlify.app/" target="_blank">Live Site</a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h2>To Do List</h2>
+          </div>
+          <div class="flip-card-back">
+            <a href="https://github.com/SoumenDass1/To-do-list/blob/main/index.html" target="_blank">GitHub</a>
+            <a href="https://mytasktoday.netlify.app/" target="_blank">Live Site</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h2>Chess go</h2>
+          </div>
+          <div class="flip-card-back">
+            <a href="https://github.com/SoumenDass1/Chess-go/blob/main/index.html" target="_blank">GitHub</a>
+            <a href="https://chess-go.netlify.app/" target="_blank">Live Site</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+  <!-- Contact Section -->
+
+  <section class="contact" id="contact">
+    <section class="contact" id="contact">
+      <h1><span>Contact </span>Me</h1>
+
+      <div class="contact-container">
+        <div class="stars-container"></div>
+        <div class="meteor-container"></div> 
+        <form class="contact-form">
+          <h2>Send a Message</h2>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+
+
+    <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+    <script src="script.js">
+    </script>
+</body>
+
+</html>

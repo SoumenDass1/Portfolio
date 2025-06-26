@@ -1,0 +1,40 @@
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+    .profile-image-container img {
+        width: 75%;
+    }
+
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+
+    .hero-content h1 span {
+        font-size: 4.25rem;
+    }
+
+    .hero-content p {
+        font-size: 2.75rem;
+    }
+
+    .hero-content p .text {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .about-me {
+        padding: 50px 80px;
+    }
+
+    .about-image img {
+        width: 450px;
+        height: 400px;
+    }
+
+    .text2 {
+        font-size: 30px;
+    }
+
+    .read-more {
+        font-size: 17px;
+    }
+}
