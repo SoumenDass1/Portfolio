@@ -1,0 +1,17 @@
+html {
+  scroll-behavior: auto;
+}
+
+.footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+
+
+.footer p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
