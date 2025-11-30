@@ -32,8 +32,8 @@ const Projects = () => {
                 'Real-time task counter'
             ],
             tech: ['HTML', 'CSS', 'JavaScript'],
-            github: '#',
-            demo: '#',
+            github: 'https://github.com/SoumenDass1/To-do-list',
+            demo: 'https://mytasktoday.netlify.app/',
             date: 'April 2025'
         },
         {
@@ -49,6 +49,21 @@ const Projects = () => {
             github: 'https://github.com/SoumenDass1/BMI_Calculator/blob/main/index.html',
             demo: 'https://calculate-mybmi.netlify.app/',
             date: 'April 2025'
+        },
+        {
+            title: 'React Clock',
+            description: 'A modern and interactive clock application built with React, featuring real-time updates, multiple time zones, and a clean, minimalist design.',
+            features: [
+                'Real-time clock display',
+                'Multiple timezone support',
+                'Interactive time selection',
+                'Modern minimalist UI',
+                'Responsive design'
+            ],
+            tech: ['React', 'JavaScript', 'CSS'],
+            github: 'https://github.com/SoumenDass1/React-Clock',
+            demo: 'https://react-clock-orcin.vercel.app/',
+            date: 'November 2025'
         }
     ];
 
